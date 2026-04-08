@@ -26,6 +26,14 @@ export const metadata: Metadata = {
   description:
     "Actionable VIP game guides, trust-first play strategies, and SEO-focused blog content designed for better decisions and faster learning.",
   applicationName: siteConfig.name,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo.jpeg", type: "image/jpeg" },
+    ],
+    apple: [{ url: "/logo.jpeg", type: "image/jpeg" }],
+    shortcut: ["/favicon.ico"],
+  },
   alternates: {
     canonical: "/",
   },
