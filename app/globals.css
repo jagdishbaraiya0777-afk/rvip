@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #080b13;
+  --bg-soft: #101726;
+  --card: #121a2b;
+  --text: #e9edf7;
+  --text-soft: #a8b3c9;
+  --accent: #f0c353;
+  --accent-strong: #dca83e;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sora);
+  --font-mono: var(--font-manrope);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(240, 195, 83, 0.2), transparent 28%),
+    radial-gradient(circle at 88% 0%, rgba(91, 132, 255, 0.2), transparent 25%),
+    radial-gradient(circle at 60% 95%, rgba(97, 46, 147, 0.16), transparent 32%),
+    var(--bg);
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 768px) {
+  .page-shell {
+    padding-inline: 1.5rem;
+  }
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  padding: 0.65rem 1.15rem;
+  font-weight: 700;
+  color: #10131b;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  box-shadow: 0 12px 24px -12px rgba(240, 195, 83, 0.8);
+}
+
+.primary-button:hover {
+  transform: translateY(-1px) scale(1.01);
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(240, 195, 83, 0.45);
+  background: rgba(16, 23, 38, 0.8);
+  padding: 0.65rem 1.15rem;
+  font-weight: 600;
+  color: #f6e3a6;
+  transition: background-color 200ms ease, border-color 200ms ease;
+}
+
+.secondary-button:hover {
+  background: rgba(26, 34, 52, 0.92);
+  border-color: rgba(240, 195, 83, 0.8);
+}
+
+.hero-enter {
+  animation: heroIn 650ms ease-out both;
+}
+
+@keyframes heroIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.soft-card {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: linear-gradient(150deg, rgba(18, 26, 43, 0.84), rgba(11, 16, 28, 0.72));
+  backdrop-filter: blur(4px);
+}
+
+.small-heading {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: #f5ca68;
+  font-weight: 700;
+}
+
+.toc-link {
+  color: #f2e2b3;
+  text-decoration: none;
+}
+
+.toc-link:hover {
+  text-decoration: underline;
 }

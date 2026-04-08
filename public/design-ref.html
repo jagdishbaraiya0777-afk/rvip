@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RVIP Game - Premium Mobile Casino</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-container": "#534400",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-primary-fixed": "#241a00",
+                      "surface-dim": "#131313",
+                      "secondary": "#ffb3af",
+                      "on-secondary": "#68000d",
+                      "surface": "#131313",
+                      "surface-container": "#201f1f",
+                      "primary": "#f2ca50",
+                      "on-surface-variant": "#d0c5af",
+                      "on-tertiary-fixed": "#221b00",
+                      "on-secondary-fixed-variant": "#910618",
+                      "inverse-surface": "#e5e2e1",
+                      "inverse-on-surface": "#313030",
+                      "surface-bright": "#393939",
+                      "on-secondary-fixed": "#410005",
+                      "tertiary": "#f2cc00",
+                      "surface-container-low": "#1c1b1b",
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-primary": "#735c00",
+                      "surface-variant": "#353534",
+                      "on-primary-fixed-variant": "#574500",
+                      "primary-container": "#d4af37",
+                      "error-container": "#93000a",
+                      "outline": "#99907c",
+                      "tertiary-fixed": "#ffe16d",
+                      "tertiary-fixed-dim": "#e9c400",
+                      "on-primary-container": "#554300",
+                      "tertiary-container": "#d2b100",
+                      "on-tertiary": "#3a3000",
+                      "surface-tint": "#e9c349",
+                      "error": "#ffb4ab",
+                      "on-background": "#e5e2e1",
+                      "on-tertiary-fixed-variant": "#544600",
+                      "background": "#131313",
+                      "on-primary": "#3c2f00",
+                      "on-surface": "#e5e2e1",
+                      "on-secondary-container": "#ff9e99",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed-dim": "#e9c349",
+                      "primary-fixed": "#ffe088",
+                      "secondary-fixed-dim": "#ffb3af",
+                      "outline-variant": "#4d4635",
+                      "surface-container-highest": "#353534",
+                      "secondary-container": "#950a1a",
+                      "secondary-fixed": "#ffdad7",
+                      "on-error": "#690005"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ruby-glow {
+            box-shadow: 0 0 40px -10px rgba(149, 10, 26, 0.4);
+        }
+        .gold-shimmer {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 50%, #f2ca50 100%);
+            background-size: 200% auto;
+        }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(77, 70, 53, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-xl bg-gradient-to-b from-neutral-900 to-transparent shadow-2xl shadow-yellow-500/5">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black italic tracking-tighter text-yellow-500">RVIP Game</div>
+<div class="hidden md:flex gap-8 font-plus-jakarta text-sm font-bold tracking-tight">
+<a class="text-yellow-500 border-b-2 border-yellow-500 pb-1 hover:text-yellow-400 transition-colors duration-300" href="#">Games</a>
+<a class="text-neutral-400 hover:text-yellow-400 transition-colors duration-300" href="#">Bonuses</a>
+<a class="text-neutral-400 hover:text-yellow-400 transition-colors duration-300" href="#">How it Works</a>
+<a class="text-neutral-400 hover:text-yellow-400 transition-colors duration-300" href="#">Reviews</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-lg scale-105 active:scale-95 transition-transform shadow-lg shadow-primary/20">
+                Download Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 px-6 overflow-hidden min-h-screen flex items-center">
+<!-- Background Accents -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-secondary-container/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-1/3 h-1/2 bg-primary/5 blur-[100px] rounded-full"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container/30 border border-secondary/20 text-secondary text-sm font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    #1 RATED MOBILE CASINO
+                </div>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight leading-[1.1] text-on-surface">
+                    Win <span class="text-transparent bg-clip-text gold-shimmer">Real Rewards</span> Anytime, Anywhere
+                </h1>
+<p class="text-xl text-on-surface-variant max-w-xl font-medium">
+                    Play top casino games &amp; earn big instantly. Experience the thrill of Las Vegas in the palm of your hand with RVIP's elite gaming suite.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="flex items-center justify-center gap-3 bg-gradient-to-br from-primary to-primary-container text-on-primary font-black px-8 py-4 rounded-xl shadow-xl shadow-primary/10 hover:scale-[1.02] transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone_android</span>
+                        Download for Android
+                    </button>
+<button class="flex items-center justify-center gap-3 bg-surface-container-highest border border-outline-variant/30 text-on-surface font-black px-8 py-4 rounded-xl hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">phone_iphone</span>
+                        Download for iOS
+                    </button>
+</div>
+<div class="flex flex-wrap gap-8 pt-8 opacity-70">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">security</span>
+<span class="text-xs font-bold tracking-widest uppercase">Secure</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">payments</span>
+<span class="text-xs font-bold tracking-widest uppercase">Fast Withdrawal</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<span class="text-xs font-bold tracking-widest uppercase">Verified Platform</span>
+</div>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="absolute inset-0 bg-primary/20 blur-[150px] rounded-full scale-75"></div>
+<img alt="Golden Elephant Mascot" class="relative z-20 w-full max-w-lg drop-shadow-2xl" data-alt="A luxurious high-fidelity 3D golden elephant mascot wearing a jeweled crown, sitting on a pile of gold coins, dramatic cinematic lighting against a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTEnTJOSNPzC7IpCFKppK2VkPlkC3RMSEYvWbKClQwCSYOb1O7E7NksaOcY40RC4xcXexKkD6A_V0SB_wI7q7EFL0bPj4VThsWOH8-4yLPikZNOyzclOxGHocSuUpOogZD25cf3MIRMAV8QRe2zuPYh6apeVqYwdC69cvHh1iv0iOGidYvwB86WLe2jiQn-BWR23I0z_4vR5JI7Etf-eKjh7VDjuI-dKMiHYcTo8u0Jn9J7ztKnhu-enys4Tb4FLPjP76FXrC5yoM"/>
+</div>
+</div>
+</section>
+<!-- Live Ticker -->
+<div class="bg-surface-container-lowest border-y border-outline-variant/10 py-4 overflow-hidden">
+<div class="flex gap-12 animate-marquee whitespace-nowrap px-6">
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-secondary ruby-glow"></div>
+<span class="text-sm font-bold"><span class="text-on-surface-variant">Player741</span> won <span class="text-primary">₹5,000</span> in Aviator</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-secondary ruby-glow"></div>
+<span class="text-sm font-bold"><span class="text-on-surface-variant">Rohan_K</span> won <span class="text-primary">₹12,400</span> in Mega Slots</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-secondary ruby-glow"></div>
+<span class="text-sm font-bold"><span class="text-on-surface-variant">VIP_Gamer</span> won <span class="text-primary">₹50,000</span> Jackpot</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-secondary ruby-glow"></div>
+<span class="text-sm font-bold"><span class="text-on-surface-variant">User_009</span> won <span class="text-primary">₹2,100</span> in Mines</span>
+</div>
+</div>
+</div>
+<!-- Game Categories -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="space-y-4">
+<h2 class="text-4xl font-headline font-extrabold">Elite <span class="text-primary">Game Suite</span></h2>
+<p class="text-on-surface-variant max-w-md">The most extensive collection of premium casino games tailored for the mobile experience.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant/30 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Slots -->
+<div class="group relative overflow-hidden rounded-xl glass-card p-1 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+<div class="aspect-[4/5] relative rounded-lg overflow-hidden bg-surface-container-highest">
+<img alt="Slots Game" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" data-alt="Vibrant 3D casino slot machine wheels with glowing neon symbols like cherries and 7s, premium glossy finish, dark atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgR5qH1uRBxxq0GZFJaQDfibKFVvs3PEAiC9h-EgJ7AkhH4vnLXmBucOgHk6Z9uHkQvJCy2er7xzJ5B_PO-QBSyS0FfLnBANjlv7Ndcq9xJnBWZ_jJmZe8HhYplVk934MOgeIiYR2Nu4a7jmx00bty74uEu33NfT969s033ytIOc-YBWj4Aw-G8alnIPbrfKYzFwYaiQTHaJq6F-39M5oX8g4BSjqc9SpdrHUz7_q-j1N1LVkZUn9M6UrFcWm4Y0hHTy7zVuafOQM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-xs font-bold text-primary tracking-widest uppercase">Popular</p>
+<h3 class="text-xl font-headline font-extrabold text-on-surface">Slots</h3>
+</div>
+</div>
+</div>
+<!-- Aviator -->
+<div class="group relative overflow-hidden rounded-xl glass-card p-1 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-secondary/10">
+<div class="aspect-[4/5] relative rounded-lg overflow-hidden bg-surface-container-highest">
+<img alt="Aviator Game" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" data-alt="Stylized 3D red airplane flying through a dark neon grid sky with a glowing multiplier line graph, high tension gaming aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgVS23aFXTYrxy6mbiGTgISmgrEOWuFJep8yGuHp75ZsvVdzzdJtgAv4lGupMhHkgYAyfVH11ggCYvqOZGX5Xo47Ekx0EKBBwa6o9UEqn0T71EGo8Poyc94VLdCeuILwaewn6hx_aB-_H8oX4qnlIyJqdNESeZERY_5AcTp-3hmrDurbjETNGITSgT7E_U4rtuvrL_lKaKkBaoqYejwVZsMi0Z3QNKXpPRupZbXy7shAwd_BPO943Szt2rgxvoVg-XERmPI6Vg4W0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-xs font-bold text-secondary tracking-widest uppercase">Hot</p>
+<h3 class="text-xl font-headline font-extrabold text-on-surface">Aviator</h3>
+</div>
+</div>
+</div>
+<!-- Casino -->
+<div class="group relative overflow-hidden rounded-xl glass-card p-1 transition-all hover:-translate-y-2">
+<div class="aspect-[4/5] relative rounded-lg overflow-hidden bg-surface-container-highest">
+<img alt="Casino Live" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" data-alt="Elegant close up of a 3D roulette wheel and stacks of casino chips on a dark felt table, dramatic rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyaTAnJAvJGVopWDnQQ1kxtbPJuHCTJInQidk-EywF-nqKSPPdOBRMbk27T-QBeJyWloRi8vSqdl7y4uoH61r8BfWX-99HEM9jPiRp3bn48R_BMsNK3Favmz1X_T6ASeVq-qMybWFqeEtx2mqxgNwXa8r8Ihevga-X0PuUGQtVesyTKk-FuW9SuRcxkyZ3rjRxfhALW1xIb7CODwJ4LhZvtl_j0Cv27k5tEl9V8EduX3anDTidb0i2VFTmAaAcA_g61J2rHLwc67s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-xs font-bold text-on-surface-variant tracking-widest uppercase">Live</p>
+<h3 class="text-xl font-headline font-extrabold text-on-surface">Casino</h3>
+</div>
+</div>
+</div>
+<!-- Sports -->
+<div class="group relative overflow-hidden rounded-xl glass-card p-1 transition-all hover:-translate-y-2">
+<div class="aspect-[4/5] relative rounded-lg overflow-hidden bg-surface-container-highest">
+<img alt="Sports Betting" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" data-alt="Glowing 3D sports stadium icon with a cricket bat and soccer ball, futuristic blue and gold lighting accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG62KvMexG4GDrUQzBFEQxHu3bK0ucZhRFKWzEaix1_qJGNw0iWa2VlKsYUO7yYC9zICD_DeqTebPb0VU1M3QiIaLhsOM5bUq0oNND_LOaJr1EQMibRGySxSNdrXPHYU4o9yQZ1F6IiAN3OSlQJCGYRHB26LZ0viymZ7Hv5RiZ_SsL7JRiUult6XrHuNCxDfabECvLxyS-dN49b_IZFUr54V2pibJuWLZFz0gS_v3xV9t6iF2sd7-hKjYDu0QIi6yp_Z1uj7ovPoY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-xs font-bold text-on-surface-variant tracking-widest uppercase">Betting</p>
+<h3 class="text-xl font-headline font-extrabold text-on-surface">Sports</h3>
+</div>
+</div>
+</div>
+<!-- Mines -->
+<div class="group relative overflow-hidden rounded-xl glass-card p-1 transition-all hover:-translate-y-2">
+<div class="aspect-[4/5] relative rounded-lg overflow-hidden bg-surface-container-highest">
+<img alt="Mines Game" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" data-alt="3D golden diamonds and metallic mines on a dark tactical grid, glowing ruby red and gold indicators" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqgB_rQoGIzRIcz1NyQ-J3txup1Ddd2jIudJliugxYyUYm_vHPxEJITYvFSy6-Qd7ckLViCjZz8XWJQ5bJwRbcFr7KbzrXy3D0aaS9O-E3-Lxo30Oraf5qvDH1y-rRIcwnvxj_E_dAkaQlkbfzcIULB5HVBeozRlzfrsiSyqT4fGI4RrPiIRbD9MEh6WErj4-NiXq1gHf8v9uitmL-yI4VjKNLrnABN8ZAAC908l84jfNrd8gM8YH6X6HdcCcsklkLqnBrbYFssHE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="text-xs font-bold text-on-surface-variant tracking-widest uppercase">Instant</p>
+<h3 class="text-xl font-headline font-extrabold text-on-surface">Mines</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bonuses & Rewards -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold mb-4">Exclusive <span class="text-secondary">VIP Rewards</span></h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Luxury is built into every spin. Unlock premium bonuses as you climb the ranks of our obsidian vault.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Welcome Bonus -->
+<div class="relative p-8 rounded-2xl bg-surface-container-high border border-outline-variant/10 ruby-glow overflow-hidden group">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary/10 blur-3xl rounded-full transition-all group-hover:scale-150"></div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" style="font-variation-settings: 'FILL' 1;">card_giftcard</span>
+<h3 class="text-3xl font-headline font-black text-on-surface mb-2">₹200</h3>
+<p class="text-xl font-bold text-secondary mb-4 uppercase tracking-tighter">Welcome Bonus</p>
+<p class="text-sm text-on-surface-variant mb-6">Start your journey with an immediate boost. No deposit required to get started today.</p>
+<button class="w-full py-3 rounded-lg bg-secondary/10 border border-secondary/20 text-secondary font-bold hover:bg-secondary hover:text-on-secondary transition-colors">Claim Now</button>
+</div>
+<!-- Free Spins -->
+<div class="relative p-8 rounded-2xl bg-surface-container-high border border-outline-variant/10 overflow-hidden group">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/10 blur-3xl rounded-full transition-all group-hover:scale-150"></div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6" style="font-variation-settings: 'FILL' 1;">autorenew</span>
+<h3 class="text-3xl font-headline font-black text-on-surface mb-2">Daily</h3>
+<p class="text-xl font-bold text-primary mb-4 uppercase tracking-tighter">Free Spins</p>
+<p class="text-sm text-on-surface-variant mb-6">Log in every 24 hours to claim your free spins on our most popular mega-jackpot machines.</p>
+<button class="w-full py-3 rounded-lg bg-primary/10 border border-primary/20 text-primary font-bold hover:bg-primary hover:text-on-primary transition-colors">Spin Now</button>
+</div>
+<!-- Cashback -->
+<div class="relative p-8 rounded-2xl bg-surface-container-high border border-outline-variant/10 overflow-hidden group">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary/10 blur-3xl rounded-full transition-all group-hover:scale-150"></div>
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+<h3 class="text-3xl font-headline font-black text-on-surface mb-2">100%</h3>
+<p class="text-xl font-bold text-secondary mb-4 uppercase tracking-tighter">Cashback Offers</p>
+<p class="text-sm text-on-surface-variant mb-6">Play with peace of mind. Get full cashback on your first deposit losses up to ₹10,000.</p>
+<button class="w-full py-3 rounded-lg bg-secondary/10 border border-secondary/20 text-secondary font-bold hover:bg-secondary hover:text-on-secondary transition-colors">See Details</button>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-24 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-4xl md:text-5xl font-headline font-extrabold mb-12">The Path to <span class="text-primary">Fortune</span></h2>
+<div class="space-y-12 relative">
+<div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-outline-variant/20 to-transparent"></div>
+<!-- Step 1 -->
+<div class="relative flex gap-8 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-primary/40 flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform">
+<span class="text-primary font-bold">1</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold text-on-surface mb-2">Sign Up</h4>
+<p class="text-on-surface-variant">Create your VIP account in less than 30 seconds with just your phone number.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex gap-8 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-primary/20 flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform">
+<span class="text-primary font-bold">2</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold text-on-surface mb-2">Deposit</h4>
+<p class="text-on-surface-variant">Instant deposits via UPI, NetBanking, or Crypto with zero processing fees.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex gap-8 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest border border-primary/20 flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform">
+<span class="text-primary font-bold">3</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold text-on-surface mb-2">Play &amp; Win</h4>
+<p class="text-on-surface-variant">Access 500+ premium games and start accumulating your rewards instantly.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex gap-8 group">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform shadow-lg shadow-primary/20">
+<span class="text-on-primary font-bold">4</span>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold text-on-surface mb-2">Withdraw Instantly</h4>
+<p class="text-on-surface-variant">Cash out your winnings directly to your bank account within 5 minutes.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-10 bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="relative z-10 bg-surface-container p-4 rounded-[2rem] border border-outline-variant/20 shadow-2xl">
+<img alt="Mobile App Screen" class="rounded-[1.5rem] w-full" data-alt="High-quality 3D render of a premium mobile phone showing a dark mode casino dashboard with gold icons, a spin-the-wheel game, and a balance of 100,000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGB3Uo4ZagwcuU77riuG1XKD4Z2KPwHhX44Y-qQgAYpEtvX3qFtt-w1Jgk6Rb9jAZWAPkpcWRO4S825HBFnNSs9sQ53MSgKV73cwMxCP3UPGSh1AOc0kfXrBTqD5GZT4hjwLZvkAvmEpVcpZRWySV39byDPIw6oZ_VhU5bI0gFmMAWLZTNnGtgjo-lywb97p5JFGi28gKkNUxFV4Lf87kmwe4J_SQGliUJWkm7UjoJZr1bFhdZhVC_R6tlA72N_qCoQD50j1bpTvA"/>
+</div>
+<!-- Floating stats -->
+<div class="absolute -bottom-6 -left-6 bg-surface-container-highest p-6 rounded-2xl border border-outline-variant/30 shadow-2xl z-20">
+<p class="text-xs text-on-surface-variant uppercase font-bold tracking-widest mb-1">Total Downloads</p>
+<p class="text-3xl font-headline font-black text-primary">5,000,000+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof & Stats -->
+<section class="py-24 px-6 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto text-center">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<h5 class="text-5xl font-headline font-black text-on-surface mb-2">4.8/5</h5>
+<div class="flex justify-center gap-1 text-primary mb-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">User Rating</p>
+</div>
+<div>
+<h5 class="text-5xl font-headline font-black text-on-surface mb-2">₹10Cr+</h5>
+<p class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mt-6">Monthly Payouts</p>
+</div>
+<div>
+<h5 class="text-5xl font-headline font-black text-on-surface mb-2">24/7</h5>
+<p class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mt-6">Live Support</p>
+</div>
+<div>
+<h5 class="text-5xl font-headline font-black text-on-surface mb-2">99.9%</h5>
+<p class="text-sm font-bold text-on-surface-variant uppercase tracking-widest mt-6">Uptime Guaranteed</p>
+</div>
+</div>
+<!-- Testimonials -->
+<div class="mt-24 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+<div class="p-8 rounded-2xl bg-surface border border-outline-variant/10">
+<p class="text-lg text-on-surface mb-6 italic">"RVIP Game is hands down the smoothest mobile casino app I've ever used. The withdrawals are actually instant, no jokes. The Aviator game is my go-to!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 border border-primary/20"></div>
+<div>
+<p class="font-bold">Rahul Sharma</p>
+<p class="text-xs text-on-surface-variant">Verified Gold Member</p>
+</div>
+</div>
+</div>
+<div class="p-8 rounded-2xl bg-surface border border-outline-variant/10">
+<p class="text-lg text-on-surface mb-6 italic">"The ₹200 welcome bonus allowed me to test the platform without any risk. I've already recommended it to all my friends who enjoy sports betting."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 border border-secondary/20"></div>
+<div>
+<p class="font-bold">Anita Desai</p>
+<p class="text-xs text-on-surface-variant">Verified Platinum Member</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-20 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="relative bg-gradient-to-br from-secondary-container to-surface-container-highest p-12 md:p-20 rounded-[3rem] overflow-hidden text-center ruby-glow border border-secondary/20">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-6xl font-headline font-black text-on-surface mb-8">Start Winning Today</h2>
+<p class="text-xl text-on-surface-variant mb-12 max-w-2xl mx-auto">Join the elite club of mobile winners. Your fortune is just a tap away.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-black px-10 py-5 rounded-2xl shadow-2xl shadow-primary/30 text-lg hover:scale-105 transition-transform active:scale-95">
+                            Download for Android
+                        </button>
+<button class="bg-surface text-on-surface border border-outline-variant/40 font-black px-10 py-5 rounded-2xl shadow-xl text-lg hover:bg-surface-bright transition-colors active:scale-95">
+                            Download for iOS
+                        </button>
+</div>
+<p class="mt-8 text-xs font-bold text-on-surface-variant/60 uppercase tracking-[0.3em]">Secure • Fast • Verified</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-neutral-950 border-t border-neutral-800/50 w-full py-12 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-black text-yellow-600 mb-6">RVIP Game</div>
+<p class="font-manrope text-xs text-neutral-500 leading-relaxed">
+                    The ultimate premium mobile gaming experience. We provide secure, high-stakes entertainment for the modern era.
+                </p>
+</div>
+<div>
+<h6 class="text-yellow-500 font-bold mb-6 text-xs uppercase tracking-widest">Platform</h6>
+<div class="flex flex-col gap-4 font-manrope text-xs text-neutral-600">
+<a class="hover:text-white transition-colors" href="#">Games</a>
+<a class="hover:text-white transition-colors" href="#">Bonuses</a>
+<a class="hover:text-white transition-colors" href="#">VIP Program</a>
+</div>
+</div>
+<div>
+<h6 class="text-yellow-500 font-bold mb-6 text-xs uppercase tracking-widest">Legal</h6>
+<div class="flex flex-col gap-4 font-manrope text-xs text-neutral-600">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Responsible Gaming</a>
+</div>
+</div>
+<div>
+<h6 class="text-yellow-500 font-bold mb-6 text-xs uppercase tracking-widest">Support</h6>
+<div class="flex flex-col gap-4 font-manrope text-xs text-neutral-600">
+<a class="hover:text-white transition-colors" href="#">Contact Us</a>
+<a class="hover:text-white transition-colors" href="#">Help Center</a>
+<a class="hover:text-white transition-colors" href="#">Affiliate Program</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-neutral-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-manrope text-xs text-neutral-500">© 2024 RVIP Game. All rights reserved. Play responsibly.</p>
+<div class="flex gap-6 opacity-30">
+<img alt="Visa" class="h-4" data-alt="Visa logo in monochrome grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_HAFybVPkd0XYTgPboIqBdxEmiyzIl-nEfuOJeStlPSwAZe30pJQpigERl6AROED7eJF4cgvR5y-cyY5Ck1uXP1tKd9eNWsdouWmciHtoBNtUXw1PZo2I1bl5VoW3QwEF1nyOw-OhFUR6-sih84QNktVozehIebAJ-J9HzorpFFwb2v2bA50CU-S6n3bls_z2S9NdPhh6o7CEGzneJl0sAK91ml9Fk-4poB8iBZGKQ2qaf2fpSSZlFeVi2aM4-H_bCbpOAAIjIN4"/>
+<img alt="Mastercard" class="h-4" data-alt="Mastercard logo in monochrome grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDymFdRsysXpDkPlSZp-L2f0OY4Uoi64n02ROs48PTgkPVNqdq30RyLabjAq7MGb1Cyv9AZraoF-fZYtXyzGkcU9_lYDTLHtVjCrM_cGRg5FFHn-MKGIAvbgm0EBAJA7w1oJIBl_zvAl_4ZANRxaqe7gJoKwI6lN3pNEzUhAvc6ia72l6vBiLl4k-2__JQ6EAVddHm18MT0R4t5IHK0fSXIULgHQCS1vLiOLqXm3dy02Zf4s2ITD8xAXY3mdqvU4qnu36WyZ8GDW_Q"/>
+<img alt="UPI" class="h-4" data-alt="UPI logo in monochrome grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsPjt204YrN2je08YzmrBABt4bYzkxTvzU5K-kzeAWlvPY0ucZS6L8GrlRa6Rn_ALfbcw1A_LyhL3IFvu4_LI2rEc7QyWZbOdb-sK23Da9X0nT7Y-vdQ9FI-XY8t15QLrxb0hB7P9dkhMUzzUl2RbjeIiFqy5_OTakt8VsGRnEuOCGVI53uhJeX7hcSxb4ZqdhCQsT8oFachRE2YzTSMwzdUrVebXPZOoaKwzrZtH4aWhavFuAmhtomnTnGTk_Q94YzZZ1myXhzdc"/>
+<img alt="Bitcoin" class="h-4" data-alt="Bitcoin logo in monochrome grey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7yK2J2atzzjeOuBsxeJE_KL4jocgULR_3LgJbTjchXnNhf9yzzUOOZZZkEsqpKRaGHyF027bcymmxH0ZALt5wGayAQN7TuFPGBQVOwOBnMvz-YSFpkKMwKoZDmgJs9AkyreGwfmknGOZJNBIA6nsQ4AqlEH5XOnV81EiGebwc2br5-IbmhVC_clIBDiK0te4JYnh_EwDs30bEoWN7Ygo_2CSSriwnSIOrC5A7_cMiZsPcQuSY7D-ZVAaWXiyx4LqoQ97D-ZJCMjg"/>
+</div>
+</div>
+</footer>
+</body></html>
