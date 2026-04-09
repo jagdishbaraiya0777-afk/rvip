@@ -97,21 +97,31 @@ export default async function HomePage() {
         <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="hero-enter space-y-6">
             <p className="small-heading">EEAT-Optimized VIP Game Resource</p>
+            <div className="soft-card mx-auto w-full max-w-[220px] overflow-hidden rounded-3xl p-5 lg:hidden">
+              <Image
+                src="/logo.jpeg"
+                alt="Official RVIP logo"
+                width={420}
+                height={420}
+                className="mx-auto w-full rounded-full border border-amber-300/40 object-cover"
+                priority
+              />
+            </div>
             <h1 className="text-4xl font-extrabold leading-tight text-white md:text-6xl">
               {primaryKeyword} strategies, trust signals, and conversion-ready guides
             </h1>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link href={siteConfig.ctaUrl} target="_blank" rel="noreferrer" className="primary-button">
+                Download App
+              </Link>
+              <Link href="/blog" className="secondary-button hidden sm:inline-flex">
+                Read Expert Blog Guides
+              </Link>
+            </div>
             <p className="max-w-2xl text-base leading-8 text-slate-200 md:text-lg">
               We combine experience-based usage patterns, transparent risk notes, and practical execution
               frameworks to help you use {primaryKeyword} and related vip games paths with better confidence.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <Link href={siteConfig.ctaUrl} target="_blank" rel="noreferrer" className="primary-button">
-                Get Started Now
-              </Link>
-              <Link href="/blog" className="secondary-button">
-                Read Expert Blog Guides
-              </Link>
-            </div>
             <ul className="flex flex-wrap gap-2 text-xs text-slate-200 md:text-sm">
               {secondaryKeywords.map((keyword) => (
                 <li
@@ -124,7 +134,7 @@ export default async function HomePage() {
             </ul>
           </div>
 
-          <div className="hero-enter relative">
+          <div className="hero-enter relative hidden lg:block">
             <div className="soft-card overflow-hidden rounded-3xl p-8">
               <Image
                 src="/logo.jpeg"
