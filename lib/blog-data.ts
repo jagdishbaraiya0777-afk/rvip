@@ -1,4 +1,5 @@
 import { absoluteUrl } from "@/lib/site-config";
+import { rvipBlogPosts } from "@/lib/blog-posts-rvip";
 
 export type BlogFaq = {
   question: string;
@@ -691,6 +692,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  ...rvipBlogPosts,
 ];
 
 export function getAllPosts(): BlogPost[] {

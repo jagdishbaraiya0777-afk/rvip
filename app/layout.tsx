@@ -40,6 +40,11 @@ export const metadata: Metadata = {
   keywords: [
     "vip game",
     "vip games",
+    "rvip games",
+    "rvip game",
+    "rvip apk",
+    "rvip game app",
+    "rvip app download",
     "vip game online",
     "vip online gaming",
     "game vip online",

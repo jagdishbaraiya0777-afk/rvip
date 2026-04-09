@@ -5,6 +5,7 @@ import Script from "next/script";
 import { CtaBlock } from "@/components/cta-block";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { Reveal } from "@/components/reveal";
+import { ScreenshotsCarousel } from "@/components/screenshots-carousel";
 import { getAllPosts } from "@/lib/blog-data";
 import { getTopKeywords } from "@/lib/keywords";
 import { createMetadata } from "@/lib/seo";
@@ -13,7 +14,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = createMetadata({
   title: "VIP Game Guide Hub: Trusted Reviews & Blog",
   description:
-    "Explore vip game and vip games guides, screenshots, FAQs, and step-by-step playbooks with transparent trust signals, fast UI, and direct secure access.",
+    "Explore vip game, rvip games, rvip game app, and rvip apk guides with transparent trust signals, FAQs, and practical step-by-step playbooks.",
   path: "/",
   image: "/ss1.jpeg",
 });
@@ -59,9 +60,11 @@ const steps = [
 const features = [
   "Mobile-first UI designed for fast navigation and low friction.",
   "Transparent trust framework: risk notes, disclaimers, and clear editorial policy.",
-  "Practical playbooks for vip game online, vip online gaming, and related queries.",
+  "Practical playbooks for vip game online, rvip game app, rvip apk, and related queries.",
   "Internal guide network with interlinked blog posts for deeper topical authority.",
 ];
+
+const rvipKeywordCluster = ["rvip games", "rvip game", "rvip apk", "rvip game app"];
 
 export default async function HomePage() {
   const [topKeywords, posts] = await Promise.all([getTopKeywords(8), Promise.resolve(getAllPosts())]);
@@ -148,6 +151,30 @@ export default async function HomePage() {
       </section>
 
       <section className="page-shell mt-16">
+        <Reveal className="soft-card rounded-3xl p-6 md:p-8">
+          <p className="small-heading">RVIP Keyword Focus</p>
+          <h2 className="mt-2 text-3xl font-bold text-white md:text-4xl">
+            RVIP games, RVIP game, RVIP APK, and RVIP game app resource center
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-200 md:text-base">
+            We publish dedicated EEAT content for these RVIP keyword clusters with setup guides, safety checklists,
+            transparent risk notes, and internal links to related pages so users and crawlers can follow a clear topic
+            path.
+          </p>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {rvipKeywordCluster.map((keyword) => (
+              <li
+                key={keyword}
+                className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs tracking-wide text-slate-100 md:text-sm"
+              >
+                {keyword}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </section>
+
+      <section className="page-shell mt-16">
         <Reveal>
           <div className="mb-6">
             <p className="small-heading">Screenshots</p>
@@ -157,19 +184,28 @@ export default async function HomePage() {
           </div>
         </Reveal>
         <div className="grid gap-4 sm:grid-cols-2">
-          {["ss1.jpeg", "ss2.jpeg", "ss3.jpeg", "ss4.jpeg"].map((imageName, index) => (
-            <Reveal key={imageName} delay={index * 60}>
-              <div className="soft-card overflow-hidden rounded-2xl p-2">
-                <Image
-                  src={`/${imageName}`}
-                  alt={`${primaryKeyword} screenshot ${index + 1} showing gameplay and UI controls`}
-                  width={900}
-                  height={600}
-                  className="h-full w-full rounded-xl object-cover"
-                />
-              </div>
-            </Reveal>
-          ))}
+          <Reveal className="sm:col-span-2">
+            <ScreenshotsCarousel
+              slides={[
+                {
+                  src: "/ss1.jpeg",
+                  alt: `${primaryKeyword} screenshot 1 showing gameplay and UI controls`,
+                },
+                {
+                  src: "/ss2.jpeg",
+                  alt: `${primaryKeyword} screenshot 2 showing rewards and game categories`,
+                },
+                {
+                  src: "/ss3.jpeg",
+                  alt: `${primaryKeyword} screenshot 3 showing account and wallet screens`,
+                },
+                {
+                  src: "/ss4.jpeg",
+                  alt: `${primaryKeyword} screenshot 4 showing game controls and play history`,
+                },
+              ]}
+            />
+          </Reveal>
         </div>
       </section>
 

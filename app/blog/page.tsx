@@ -9,7 +9,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata: Metadata = createMetadata({
   title: "Blog: VIP Game, RCIP, and SEO Guides",
   description:
-    "Read high-quality long-form blog guides with FAQ schema, practical examples, and internal links for vip game, vip games, and rcip canada topics.",
+    "Read high-quality long-form blog guides with FAQ schema and internal links for rvip games, rvip game, rvip apk, rvip game app, vip game, and rcip canada topics.",
   path: "/blog",
   image: "/ss2.jpeg",
 });

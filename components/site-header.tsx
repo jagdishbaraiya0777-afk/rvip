@@ -17,7 +17,6 @@ export function SiteHeader() {
           />
           <div>
             <p className="text-sm font-semibold tracking-wide text-white">RVIP Insider</p>
-            <p className="text-xs text-amber-200/80">SEO Guides + Blog</p>
           </div>
         </Link>
 
