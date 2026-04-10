@@ -70,6 +70,16 @@ export default async function BlogPage() {
                     Disclaimer
                   </Link>
                 </li>
+                <li>
+                  <Link href="/rvip-game" className="hover:text-amber-200">
+                    RVIP game keyword page
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rvip-apk-download" className="hover:text-amber-200">
+                    RVIP APK download keyword page
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>

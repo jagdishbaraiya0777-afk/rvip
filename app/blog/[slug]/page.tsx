@@ -53,6 +53,10 @@ export default async function BlogPostPage({ params }: PageProps) {
         { label: "About Our Editorial Standards", href: "/about" },
         { label: "Disclaimer and Risk Notes", href: "/disclaimer" },
         { label: "Blog Listing", href: "/blog" },
+        { label: "Keyword Page: RVIP game", href: "/rvip-game" },
+        { label: "Keyword Page: RVIP app download", href: "/rvip-app-download" },
+        { label: "Keyword Page: RVIP APK", href: "/rvip-apk" },
+        { label: "Keyword Page: RVIP APK download", href: "/rvip-apk-download" },
         ...post.internalLinks,
         ...relatedPosts.map((relatedPost) => ({
           label: `Related guide: ${relatedPost.title}`,

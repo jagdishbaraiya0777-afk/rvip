@@ -44,6 +44,7 @@ export const metadata: Metadata = {
     "rvip game",
     "rvip apk",
     "rvip game app",
+    "rvip apk download",
     "rvip app download",
     "vip game online",
     "vip online gaming",

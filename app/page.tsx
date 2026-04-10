@@ -64,7 +64,13 @@ const features = [
   "Internal guide network with interlinked blog posts for deeper topical authority.",
 ];
 
-const rvipKeywordCluster = ["rvip games", "rvip game", "rvip apk", "rvip game app"];
+const rvipKeywordCluster = [
+  { keyword: "rvip games", href: "/rvip-game" },
+  { keyword: "rvip game", href: "/rvip-game" },
+  { keyword: "rvip apk", href: "/rvip-apk" },
+  { keyword: "rvip game app", href: "/rvip-app-download" },
+  { keyword: "rvip apk download", href: "/rvip-apk-download" },
+];
 
 export default async function HomePage() {
   const [topKeywords, posts] = await Promise.all([getTopKeywords(8), Promise.resolve(getAllPosts())]);
@@ -172,12 +178,14 @@ export default async function HomePage() {
             path.
           </p>
           <ul className="mt-4 flex flex-wrap gap-2">
-            {rvipKeywordCluster.map((keyword) => (
-              <li
-                key={keyword}
-                className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs tracking-wide text-slate-100 md:text-sm"
-              >
-                {keyword}
+            {rvipKeywordCluster.map((item) => (
+              <li key={item.keyword}>
+                <Link
+                  href={item.href}
+                  className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs tracking-wide text-slate-100 transition-colors hover:border-amber-300/50 hover:text-amber-200 md:text-sm"
+                >
+                  {item.keyword}
+                </Link>
               </li>
             ))}
           </ul>
@@ -294,6 +302,16 @@ export default async function HomePage() {
                 <li>
                   <Link href="/blog" className="hover:text-amber-200">
                     Blog index: all long-form SEO guides
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rvip-game" className="hover:text-amber-200">
+                    RVIP game keyword page
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rvip-apk-download" className="hover:text-amber-200">
+                    RVIP APK download keyword page
                   </Link>
                 </li>
               </ul>
