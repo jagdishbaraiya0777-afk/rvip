@@ -9,12 +9,13 @@ import { ScreenshotsCarousel } from "@/components/screenshots-carousel";
 import { getAllPosts } from "@/lib/blog-data";
 import { getTopKeywords } from "@/lib/keywords";
 import { createMetadata } from "@/lib/seo";
+import { websiteSchema } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = createMetadata({
-  title: "VIP Game Guide Hub: Trusted Reviews & Blog",
+  title: "RVIP Game: Earn Money, Daily Rewards & Trusted App Guide",
   description:
-    "Explore vip game, rvip games, rvip game app, and rvip apk guides with transparent trust signals, FAQs, and practical step-by-step playbooks.",
+    "Explore RVIP game guides with earn money tips, daily rewards, ₹500 welcome bonus info, and trusted safe app setup walkthroughs.",
   path: "/",
   image: "/ss1.jpeg",
 });
@@ -58,10 +59,10 @@ const steps = [
 ];
 
 const features = [
-  "Mobile-first UI designed for fast navigation and low friction.",
-  "Transparent trust framework: risk notes, disclaimers, and clear editorial policy.",
-  "Practical playbooks for vip game online, rvip game app, rvip apk, and related queries.",
-  "Internal guide network with interlinked blog posts for deeper topical authority.",
+  "Mobile-first UI designed for fast navigation and low friction. Earn daily rewards and money with a trusted, safe platform.",
+  "Transparent trust framework: risk notes, disclaimers, and clear editorial policy. RVIP is safe and secure for all users.",
+  "Practical playbooks for vip game online, rvip game app, rvip apk, and related queries. Daily rewards and ₹500 welcome bonus explained.",
+  "Internal guide network with interlinked blog posts for deeper topical authority. Trusted, responsible guidance throughout.",
 ];
 
 const rvipKeywordCluster = [
@@ -70,6 +71,10 @@ const rvipKeywordCluster = [
   { keyword: "rvip apk", href: "/rvip-apk" },
   { keyword: "rvip game app", href: "/rvip-app-download" },
   { keyword: "rvip apk download", href: "/rvip-apk-download" },
+  { keyword: "rvip download", href: "/rvip-download" },
+  { keyword: "rvip bonus", href: "/rvip-bonus" },
+  { keyword: "rvip earn money", href: "/rvip-earn-money" },
+  { keyword: "rvip safe trusted", href: "/rvip-safe-trusted" },
 ];
 
 export default async function HomePage() {
@@ -97,6 +102,11 @@ export default async function HomePage() {
         id="home-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }}
+      />
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
       <section className="page-shell pt-10 md:pt-16">
@@ -312,6 +322,26 @@ export default async function HomePage() {
                 <li>
                   <Link href="/rvip-apk-download" className="hover:text-amber-200">
                     RVIP APK download keyword page
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rvip-download" className="hover:text-amber-200">
+                    Download RVIP App
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rvip-bonus" className="hover:text-amber-200">
+                    RVIP Bonus &amp; ₹500 Welcome Bonus
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rvip-earn-money" className="hover:text-amber-200">
+                    RVIP Earn Money &amp; Daily Rewards
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rvip-safe-trusted" className="hover:text-amber-200">
+                    RVIP Safe &amp; Trusted Guide
                   </Link>
                 </li>
               </ul>

@@ -21,11 +21,12 @@ export default function DisclaimerPage() {
       <Reveal>
         <p className="small-heading">Disclaimer</p>
         <h1 className="mt-2 max-w-4xl text-4xl font-extrabold leading-tight text-white md:text-5xl">
-          Legal, financial-risk, and transparency notice
+          Disclaimer: Legal, financial-risk, and transparency notice
         </h1>
         <p className="mt-4 max-w-3xl text-base leading-8 text-slate-200 md:text-lg">
-          This website provides educational and informational content. We do not guarantee outcomes, earnings,
-          approvals, or results from any action taken based on our pages or blog posts.
+          This website provides educational and informational content. We are committed to safe, trusted, and
+          responsible guidance. We do not guarantee outcomes, earnings, approvals, or results from any action
+          taken based on our pages or blog posts.
         </p>
       </Reveal>
 

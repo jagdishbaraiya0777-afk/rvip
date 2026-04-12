@@ -7,9 +7,9 @@ import { getAllPosts } from "@/lib/blog-data";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
-  title: "About RVIP Insider: EEAT Standards",
+  title: "About RVIP Insider: Safe, Trusted EEAT Standards",
   description:
-    "Learn our mission, editorial process, trust signals, and how we create experience-driven VIP game and SEO guides with transparent, practical advice.",
+    "Learn our mission, editorial process, and how we create safe, trusted, experience-driven VIP game guides with transparent, practical advice.",
   path: "/about",
   image: "/ss2.jpeg",
 });

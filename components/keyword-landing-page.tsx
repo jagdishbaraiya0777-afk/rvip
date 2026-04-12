@@ -5,6 +5,7 @@ import { CtaBlock } from "@/components/cta-block";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { Reveal } from "@/components/reveal";
 import type { KeywordLanding } from "@/lib/keyword-landings";
+import { absoluteUrl } from "@/lib/site-config";
 
 export function KeywordLandingPage({ landing }: { landing: KeywordLanding }) {
   const faqSchema = {
@@ -20,12 +21,26 @@ export function KeywordLandingPage({ landing }: { landing: KeywordLanding }) {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: landing.title, item: absoluteUrl(landing.path) },
+    ],
+  };
+
   return (
     <>
       <Script
         id={`faq-schema-${landing.keyword.replace(/\s+/g, "-")}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Script
+        id={`breadcrumb-schema-${landing.keyword.replace(/\s+/g, "-")}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <section className="page-shell pt-10 md:pt-16">
@@ -43,6 +58,12 @@ export function KeywordLandingPage({ landing }: { landing: KeywordLanding }) {
             </Link>
             <Link href="/blog" className="secondary-button">
               Open Blog Hub
+            </Link>
+            <Link href="/rvip-download" className="secondary-button">
+              Download RVIP App
+            </Link>
+            <Link href="/rvip-safe-trusted" className="secondary-button">
+              RVIP Safe &amp; Trusted Guide
             </Link>
           </div>
         </Reveal>
@@ -84,6 +105,18 @@ export function KeywordLandingPage({ landing }: { landing: KeywordLanding }) {
           ))}
         </section>
 
+        <section className="mt-12 rounded-3xl border border-amber-400/20 bg-[#0f1423]/85 p-6">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-300">Trust Notice</p>
+          <p className="mt-2 text-sm leading-7 text-slate-200 md:text-base">
+            This content is for educational purposes only. RVIP is a safe and trusted platform when used
+            responsibly. Always review our{" "}
+            <Link href="/disclaimer" className="text-amber-300 hover:text-amber-200">
+              Disclaimer
+            </Link>{" "}
+            before making any financial decisions.
+          </p>
+        </section>
+
         <section className="mt-12">
           <Reveal>
             <h2 className="text-2xl font-bold text-white md:text-3xl">FAQ</h2>
@@ -97,6 +130,8 @@ export function KeywordLandingPage({ landing }: { landing: KeywordLanding }) {
           <CtaBlock
             title={`Ready to explore ${landing.keyword} with a safer framework?`}
             body="Use verified access paths, keep clear session limits, and follow transparent risk-aware guidance before scaling activity."
+            primaryCta="Download App Now"
+            secondaryCta="Play RVIP Game"
           />
         </section>
       </section>

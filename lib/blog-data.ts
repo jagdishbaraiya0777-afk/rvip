@@ -1,5 +1,5 @@
 import { absoluteUrl } from "@/lib/site-config";
-import { rvipBlogPosts } from "@/lib/blog-posts-rvip";
+import { rvipBlogPosts, rvipNewBlogPosts } from "@/lib/blog-posts-rvip";
 
 export type BlogFaq = {
   question: string;
@@ -162,6 +162,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Homepage", href: "/" },
       { label: "About Our Editorial Method", href: "/about" },
       { label: "Read the Safety Disclaimer", href: "/disclaimer" },
+      { label: "Download RVIP App", href: "/rvip-download" },
       { label: "More Strategy Articles", href: "/blog" },
     ],
     externalReferences: [
@@ -256,7 +257,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         id: "conclusion",
-        heading: "Conclusion: Consistency Is Built, Not Found",
+        heading: "Conclusion: VIP Games Consistency Is Built, Not Found",
         paragraphs: [
           "In vip games, routine beats randomness. A compact daily system with clear bankroll buckets, trigger rules, and short reviews gives you far more control than chasing one-time results.",
           "Run this framework for fourteen days, then adjust only one variable at a time. That measured approach helps you identify what genuinely improves performance and what only feels exciting in the moment.",
@@ -293,6 +294,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Read Our Mission", href: "/about" },
       { label: "Browse All Blog Posts", href: "/blog" },
       { label: "Responsible Play Disclaimer", href: "/disclaimer" },
+      { label: "RVIP Earn Money Guide", href: "/rvip-earn-money" },
     ],
     externalReferences: [
       {
@@ -386,7 +388,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         id: "conclusion",
-        heading: "Conclusion: Security Is a Repeatable Habit",
+        heading: "Conclusion: Game VIP Online Security Is a Repeatable Habit",
         paragraphs: [
           "Safe game vip online usage is not about one-time setup. It is a repeatable habit: verify links, protect account access, track payments, and filter offers rationally. These actions take minutes and can save major losses.",
           "Use this checklist before every deposit. Consistency in security behavior gives you confidence and keeps your focus on informed gameplay instead of preventable account risk.",
@@ -423,6 +425,7 @@ export const blogPosts: BlogPost[] = [
       { label: "About and Trust Signals", href: "/about" },
       { label: "Read More Blog Guides", href: "/blog" },
       { label: "Legal and Risk Disclaimer", href: "/disclaimer" },
+      { label: "RVIP Safe & Trusted Guide", href: "/rvip-safe-trusted" },
     ],
     externalReferences: [
       {
@@ -553,6 +556,7 @@ export const blogPosts: BlogPost[] = [
       { label: "About Our EEAT Approach", href: "/about" },
       { label: "Blog Index", href: "/blog" },
       { label: "Risk and Legal Notes", href: "/disclaimer" },
+      { label: "RVIP Game Guide", href: "/rvip-game" },
     ],
     externalReferences: [
       {
@@ -684,6 +688,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Editorial Transparency", href: "/about" },
       { label: "All Practical Guides", href: "/blog" },
       { label: "Disclaimer", href: "/disclaimer" },
+      { label: "RVIP Download Guide", href: "/rvip-download" },
     ],
     externalReferences: [
       {
@@ -693,6 +698,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   ...rvipBlogPosts,
+  ...rvipNewBlogPosts,
 ];
 
 export function getAllPosts(): BlogPost[] {

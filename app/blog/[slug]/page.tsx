@@ -8,7 +8,7 @@ import { FaqAccordion } from "@/components/faq-accordion";
 import { RelatedPosts } from "@/components/related-posts";
 import { Reveal } from "@/components/reveal";
 import { getAllPosts, getPostBySlug, getRelatedPosts } from "@/lib/blog-data";
-import { createArticleSchema, createBlogMetadata, createFaqSchema } from "@/lib/seo";
+import { createArticleSchema, createBlogBreadcrumbSchema, createBlogMetadata, createFaqSchema } from "@/lib/seo";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -45,6 +45,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const articleSchema = createArticleSchema(post);
   const faqSchema = createFaqSchema(post);
+  const breadcrumbSchema = createBlogBreadcrumbSchema(post);
   const relatedPosts = getRelatedPosts(post.slug, 3);
   const strategicInternalLinks = Array.from(
     new Map(
@@ -87,6 +88,11 @@ export default async function BlogPostPage({ params }: PageProps) {
         id={`faq-schema-${post.slug}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Script
+        id={`breadcrumb-schema-${post.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <article className="page-shell pt-10 md:pt-16">
